@@ -1,0 +1,84 @@
+/**
+ * WooCommerce Video Product Gallery - Admin Styles
+ */
+
+.woo-yt-admin-metabox {
+    font-size: 13px;
+}
+
+.woo-yt-field-group {
+    margin-bottom: 12px;
+}
+
+.woo-yt-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #1d2327;
+}
+
+.woo-yt-input {
+    direction: ltr !important;
+    font-family: Consolas, Monaco, monospace;
+    font-size: 12px;
+    padding: 6px 8px;
+}
+
+.woo-yt-desc {
+    margin-top: 4px;
+    color: #646970;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.woo-yt-divider {
+    border: 0;
+    border-top: 1px solid #dcdcde;
+    margin: 14px 0;
+}
+
+.woo-yt-preview-box {
+    margin-bottom: 10px;
+    background: #f0f0f1;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    overflow: hidden;
+    min-height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.woo-yt-preview-box img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.woo-yt-fallback-badge {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    pointer-events: none;
+}
+
+.woo-yt-placeholder-text {
+    color: #8c8f94;
+    font-size: 12px;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.woo-yt-btn-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+}
