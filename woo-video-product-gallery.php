@@ -3,7 +3,7 @@
  * Plugin Name: WooCommerce Video Product Gallery
  * Plugin URI:  https://github.com/youssefhossam29/woo-video-product-gallery
  * Description: Seamlessly integrates YouTube videos into the WooCommerce single product image gallery with custom thumbnail support and responsive in-gallery playback.
- * Version:     1.0.0
+ * Version:     1.0.1
  * Author:      Youssef Hossam
  * Author URI:  https://github.com/youssefhossam29
  * Text Domain: woo-video-product-gallery
@@ -18,10 +18,23 @@
 defined( 'ABSPATH' ) || exit;
 
 // Define plugin constants
-define( 'WOO_VIDEO_GALLERY_VERSION', '1.0.0' );
+define( 'WOO_VIDEO_GALLERY_VERSION', '1.0.1' );
 define( 'WOO_VIDEO_GALLERY_FILE', __FILE__ );
 define( 'WOO_VIDEO_GALLERY_PATH', plugin_dir_path( __FILE__ ) );
 define( 'WOO_VIDEO_GALLERY_URL', plugin_dir_url( __FILE__ ) );
+
+/**
+ * Declare compatibility with WooCommerce HPOS (High-Performance Order Storage).
+ */
+add_action( 'before_woocommerce_init', function() {
+    if ( class_exists( \Automattic\WooCommerce\Utilities\FeaturesUtil::class ) ) {
+        \Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility(
+            'custom_order_tables',
+            WOO_VIDEO_GALLERY_FILE,
+            true
+        );
+    }
+} );
 
 /**
  * Check if WooCommerce is active before initializing.
